@@ -1,15 +1,27 @@
 
 body {
 
-background-color: aliceblue;
+background-color: rgb(72, 91, 199);
 
 }
+
+
+
+    h1{
+    
+        color: antiquewhite;
+        font-size: 10cm;
+        align-content: center;
+
+
+    }
 #newburger {
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
 #color-override {
     color: #fff;
+    
     
 }
 
@@ -29,8 +41,4 @@ background-color: aliceblue;
     color: white;
     text-align: center;
     font-size: 1.2em;
-}
-h2 {
-font-size: 25cm;
-
 }
