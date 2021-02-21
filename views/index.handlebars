@@ -1,38 +1,56 @@
-<h1>Eat Da Burger!</h1>
+{{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
+<div class="container">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUVGBgYGBgWFR0ZHRcVGRYXFxgaGhgaHSggGBolGxgYITEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGxAQGy4mICUtLy83LS84NS0yLS0tLS0tLS8tLzUtLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOAA4AMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABAYDBQcCAQj/xAA+EAABBAAEAwUGBAUDAwUAAAABAAIDEQQSITEFQVEGImFxgRMyUpGhsQcUwfAjM0LR4WKS8SSCohUWQ1Ny/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAIDBAEFBv/EADERAAICAQQBAgQEBQUAAAAAAAABAhEDBBIhMVEFQRMiYXEUMpHRQqGxwfAGIyQzgf/aAAwDAQACEQMRAD8A7iiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiALzI8AWdgvSrnbTiL4o2mM94HMfIcvU18lDJPZFslGO50bqDHMeSAaLdwdNOvks7HA6ggjwXIOH9ppA84iRoIAIIHK9APO7NeC3vZvtKXe2Lj7NtNd/3O2aOmgs+YWeOppfMix4vB0RFq+znEjPFnPxOF1WYA6FbRak7VlL4CIi6AiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCq3aiQGwdda9B/klWlUrtJmExB2PeHiDp9wsmtv4fHku06+c0GPwTZGCPRjR8DR1smuZ8VFbwv20zIIgcl2STZPUuI5lbGTZeMHiW4cF7iXPedGsJFDlZ3cfAUF5+GXPzGua44OkYHCNiY1jBQaFIWl7KTSvhzSgi3EsBNkNOwJ5rZYzGxxC5HBvnufIc17V8Wzz65okIq/iO0RylzInZRpmf3RZWt/O4qS++epyNoAeZ5LPPVQjx39i2OCcvoXG1hlxsbfee0a1uNyqVI5phoF7pCbu9KvaydvRYWYW8po0SBdfqdLVM9bylFWWR03e5l9GJYRYe2iavMN+nmvJxkdkF7QRuC4Aj0VHx7XNLobcI9w0uBJHUgba3oo0kbaAazvA6ucbvybX3SWtp01yFprV2dGZICAQdDsV9tc6xTZH995dlvS9GCtNBskT8uVzXvDySDQumnQuFnU0pfjY3VHPwzrs6MipZ4tJDGAx8sln+ZI0ZSb1HUHyWwh7TnuF8Ra1xou1rzHXVXrPC6sq+FKrLIi1uH45A92Vsgu610tbIFWpp9EGqCIi6cCIiAIiIAiIgCIiAKtdrSNDp3R9XHb6X6qyEqhdq8UXubG3d5v/AHaD5ALLq38m3yXYV81+CFwfg02KtwdkZ1rfytWzhPZWGI5nfxH9XLa8MwgiiZGB7oA9a1UbjGNLRkbudz0H91JQx4Y7mN0skqMHFuLltxw1mGhduGnoBzd9BzWgbh+9ncS5x3c42fToPJTGxDovXs15WbPPK+ejdjxxgRDHdDeuR5ei9wtGzs2U7hpq/wC6kZCvOVUptOyx01RFfHqaFN/pB3quZ2u16ZC+SoxZG+W9L60pM5c9oaT3QQaGlkaiyOSxPi/e32U20pWv2I81RDygOINEtNOAPhsSF8mBc66a1tVlYD8yTup+D4cXd1jQAPQDnqs2L4U5gslpvldH0vdWRxZJRe1cEXkgmtz5NVicGQ1pe05T7tmx101oFeWxsyuzWHAd2hdnp9As2XNQ3omh0Pl1WSXBvaLLCPMLm13wm68nbVcsgvnc6IRkNABsW0Et9f3usRjug4nKDqASa22G16qQ5vT9/v8AReMW57iKEbGga5WmzpzN0ETb7fQaS6RhjZ/EpjDIAe7mb7w8hqp3D+Izsc4RBoGa8kjzdAUWguPJYII7c0Zg0kjvdNd+qjY7WR4c/M4HKT5ab81bjm4rcvJXOCk6Zc+E9oopqae4/wCF3M+B5rcrk74629FYeA9qHMIZMS5h2fzb59QtmHVXxIzZMFcxLui8seCAQbB2IXpbDOEREAREQBERARuJSZYnkdK9Tp+qpPB4vbY/UWIxf6BXDjg/gP8AQ/JwKq3YevzWJvemkeWqy5Oc8V9y6H/XIusr8oJPIKuvJcS47lbvif8ALd6fKwtQ0LPrpO1Et06pNnkMXrIsrWrIGLColrkRsi8limezXwsXdgUyCY1jLVLxBDRZ2UDC8Qilv2bw4tNOGxafEbhNhYpFi4cwCIVz19V+cPxkxOJHEZGyCUOzgwuDyGmHKMoY0aXmuzva7zBj3x6Zcw8FWu0XFHynKInGv9N15Er2MeSG1UzBOEt3RUcN2sxGFwQkcP4/so2Pkc3MY8ziHSZebg2t+Y1UP8LPxBxsmNdh5pnYiF7Xm5ALbl1Dga0B2rbUK6dkcG0OmOJiFPpoDgCCytQ4ea9Yjh/D8JmOGhZGXb5ef9grIyi1wQcWuzJxTFZZLbs4nTp5LxFjA7zWikxRleK2H3U+BhXn6mMd9o2YG9vJsy79/vyWFzByC8tRzlm2l1mKQKM9Z5HKO5ykkcbLB2U44Ynexee4490n+k/2Kvi48Suj9k+Je2gFnvs7p8eh+S9DTZLW1mPNCnaN0iItRQEREAREQGPExZmOb8QI+YXPcHify2LbI7RpPs5PCzQJ8iujKmdtuDg3JVsfo/8A0u5O8is2oi+Jx7Rdha5i/ctmNlDY3E6ivneiq2F4gLp2hWpw3akx4SXD4j+ZHE72Lz7smUWxpI2foB4qFwHin5uJxLQ2SMgPby1Fgjz1+RXmeo5p3GceYmzS4lTUi8RuWdqqkUr4/ddp0OoUyHtC0GpAW+O4+Y29VnxamEyWTTyXRYQELVEw3EGPFtcD5G1IDwVrRlcWjHOwEUVUu0nZv2jhNBIYMQwd2Ruzh8Mjdnt+oVwcVhkATlO0WRfszneF7cOw8gw/Emexk/pkGsUg+JruX6K1RY+N9ZXDXUeI6+Kyca4LDiYzFNGHsPI8j1B5FV3ivZzGGAwwYthbVN/MRBz4xyDJm0R6gqfyS+j/AJErkvqbySdnULV4x+Hu3taT4/8AKg47s5jJoPZf9Hh3925o3yPeQOYGUUTreqwYH8NMM3XFTzYk9HOyM/2g2fVFGMf4v0ObnL+E9Dj+FziKJvtH/DEMxHmBt5lb6fDFtZhRI2/RSMNFFh2ZII2RN6MblvzI1Ki4iWzag2m+Cav3MLgo8hWcxuLHPA7rPecTQ614lQZZESFnmRywuK+PesZcppEbPRKsPYbF5cQWHZ4PzGoVZL1sOzLz+aire1bi4mivJ+VnWERF6JjCIiAIiIAvL2Aggiwdwea9IgOfdtuzOTDzyRaxhjnFm5ZXeOXmRpsuc9muMnCudIW5mPoOo0eZFXv/AJVz/FrtFKH/AJSJ5a3IHSFu7ibppPTTUeK5wHhzAwctwf0HX/C8vURxybgl9z3cWlyw08cs+pdf59S5TduxdR4dx8XOAH0v7Lz/AO+pB72GYdtA/cHzaqm7vNLmgAhuovbl66LzgH2KOrhu7y5C9j4rPHS4UuEcdsu2D7S4KY99r8O+wMwOXU+LdPmtliMRi4KcyUSxu2Lxf/k2lzeKRpzDTW9XO32prjuNFv8As/2jELjC92aE+9egYRerTzHgo5MEoq8ZFJe5b4e1srf5mHPmw39CpUXbLDH3nFh/1tIXmLDscMzHNcw6g3y/f2ULiM+GjB9q9n78Vjjq53TjZ14YPpm/h4zC/wByRh8nBZHThcyxfHuF3RZmI5tY4+thfMNxThx92aaI7e9I0beRC2KUmrcWV7PDR0d+IH7KizYnxVWZhDILw+Pc7oCWv+2v/C89nmT/AJxkeKlBjN8gMx/p1HLdI5IN1fJGUZJXRceHcPdO1zg/LRoUAfU39lqsaHxuySUHDpsRyIv7K0YXgroJs+HcBE/34ztde808j1CgdqCx7spANK5quyhT3M03aKX/AKeGNvud0uHUk2bWnlxAVo4w1skWo2bWnl/wuYP9vr3hueXj4rkZpL5mS2v2LA6ZY3ThV+Zzmi5Jso9AsODmgkdlEhcfEn7FSeRVaTOqD9zeScQbsNT4fvRdA/Dvg4LBiXGy73ei5nxctggc4bnutrqen1K6z+FbXDhmHDvh08jqFfo5fEblRVqY7EkW1ERegYwiIgCIiAKu9qOMOY3JCRnOhO9eHmrEtTPwSHvuLbvvDwNclm1cMk8TWN0/JGV1wcN457YzF87dTQvYEDovDOEB/eikAdVU7S/C/l8leO0GGdKx2rXNZyymyRvrf1VOlwskZGUZwfQj9CvA0mqjJVLhn1PpvrWnyaZafM9rSr6P9jS43ATw2ZWODeoILTptmA016qNAGu1OvLKDRGm/QjdWt0soYc0cjWc8zTlI28iFX8Vh4iS6MNB6Db5cvRelHLF9F0vTnk+bDJSX3PeHgOoa0gbnM2wD18dNVC4g/UsBGXQmhr5+FrKYpAA5osDQuBs+ZB6clFlcQSMxINXpr3qFUdgpppsw5dPlx8Ti0SsNxJ7Whge9oymgw5a159fRQwz2hBcXHSyXnNrf0CyTULIsa+6BvVaG9gvkTRq0k07VwbsRegJGwvkpJJcozsxRva6hsB8I1Pe5ny5KaYszXVZIJJ0oAdSfIrXcRkOzW6Aa5RVDYa89UgYQ51AkN0Oulg5WF3Kr73k3zUmr5I7qdGwmjyU5vd+EtNOzV1HJdO/DXEQ4iJwxBBkuu8dcvIg/quSyyEy5Q7M0bnQ5t9q3F6acgvOHfKH5ozlI0Ds1UL69LpVvGn2ck7VI/RWIlGGjyNlL+mY2R6qpT43O6yf3uudM7XzCmyHPWhI06+imRdr49gHE+A3VUsUm7KlS4OgTYjuEeC5j2hlxELz3gI3G2OA660T1CyYjtg8nRuniVKwXaFkgLXgEHdrvP97KUMe38yDmVN5LjZJJPX9FhgaWusGiDp96/wAK44ngcUusMmQ/C7UfPcLQY7s/iI7JiJ8WHMPStQtCaFoi4ziT5S32jtGnQVVbWu//AIY8ebLCINA5otvi3mPT7LhPZ3hftMRGJmERZu/bTQbR8FcOzmfBvjc1xOWUZeVsLsoB82nUK3HUeirMm0mzvyL411gHqvq0mUIiIAiIgCh8She5tMNdfEefJTEUZRUlTBW8VwUMaO+6joaA0voeSqb2Pa86AsaT7zLP+7kujcTiLo3VuNR6aqrTsztyg1ZBPl0Xg+p6OC5hFI69PGeJ7VyijcTjuQt9q6pLLQ4uDWn4Re46VS1Y4d7MuE0bXNI7sjP6TzO1+ivXE+B+0NP1b1B26eXJYI+zgAoSOI5WBt0teOtQ8S2y4fgywy5cEuLTRz2Bxjdo4Ft0HDYrZHD4eUd+PKfiZ+o5q0ns9h2AtLG97enGz/lUnjPDpcOS6NxLL56hehpddDI9v9T63Sf6kx5ko6hNPyvf7o8Yrs1GdY5vR2h/stc/g8kdUbHprrf7tTcNNK8Ahmb/APJs/LfqsmLwkjW5spI1vLdjzH73C2PMk6s9OGo9NytKU4tv/wAf9jVAOaQcpJGt5ufLu1W6huL810djq4Xr4AbKVLjBsSQfEEV81GkxN7G/LVWxnLwTy6DRNXGX6NEQy5bA1s7ltX9U/MNDWtAAsU47/wBQPovjzZ2PyK8mB3wn5V91cpeTw82nxQ6yI+TYkEgNHu8ybs8yb+yMqqsf3X1kPxW3zCzHDt6j7deS65pEsWgeXmM0Q3yDYX+/BfNthaniEeCGhyC58XwjQvR/eUzFhcbM06HT981usN2klZuPkVpjJ4/JZsHgnykUDXXbnrVqMp+7IZdHpMMG5y/mXzAw46ZrXRwZmuFh1jUK0dmews5lbNinDumwwbA/qVE/DnjZhc2Ek+ycao/0OOxHQHmusLRpZwyx3I+b+Lvuj4AvqItZwIiIAiIgCIiAKtcc4a5hMsYtp1c0cvEeCsqKvJjjkVMlCbi7RRo8YCN9Nl7dizVAUNrP3pbji3ZpkhL4z7N/hsT4hVXGwzwGpYyW/E23D6bLxtT6fbtq0aX8LNW7s1nGeEueM8bjnBuife/zoo+Hc8NLZYyBzvX6DdbWPHtdsQsGL7wWbJp8c+Gq+wy6LHPk89nMJhg1720HAkuvk3lptsvHGIiP4kb+84ag1Tm8hpstW9haTRIvQ1zHivrD4nTX7fv5LO9A9+/cZH6fLuzL/wChOmH8SNmvPevlqss3Ao4W5W211e8KA+xU7hfFmMYfaEl16ADcLUcVx75iSXOaOTQar5bnxVMMOqlPb0kUR02dtrqjSywFh74zNu8wH3W1iEDoyC3M69gKNevNY+HYss0cTXUVqOmuykQYwXTcrQdO9XPqTp4WrMkMrXKfBCWHLVtdGvlZh3ezphaM59oas0K5c9VtJeCwPaWRxh17OdpXqdSttPwH+GCw0QLAFEVXlssXDMUGg+1kDC0hpsZdfRZpZpNf7d8exUpzX5bKXN2dZDJlljzNvdh+YVhZwDD1mbAI2kGnHvGiKJKycfniLu69rswolpB25+CjYLjro2FhGbejdV59Vq/5WWClG7/Q0p6qceG/1IuGhhwznR5Wk694Nq9uq+viY0526Xy6+IUKXEXd8/v+/upHCMG/EytjYCbIs9B/dbsejk5pt35L/wAO1JSk7NvwvByB8UuU5XuBsDTcb9F2ZuyicKwIhiZGAO6Pqpi9rBp44U1H3IKKV0ERFeSCIiAIiIAiIgCIiAL45oIo6hfUQGi4l2Uw0tnLkd8TNFXMb2Inb/JlDx8LxX1C6AirnhhPtE45JR6Zx/G8KxcXvwONc294LTOx4aadbTtRBGvPdd5XIe3uFyyGRrTl9q4jyFX6WCsebTwhVe7NGPNJ9mk/OMPMLw6UdV1eHstgp4mPMDDna11gVuL5LT8c/D/BMhkkaxwLGOdo4jYE9Ueja6YWp+hzl0gWF8vipPCuBNkxUULy8Nk0JzH3qsK9u/CmH/7pPmowwSkrRKWVJ0c5fjHaDM6ht3jptt0WJ+IJ1J152umN/CiDnLIfVSIfwswg3zO83HX6qa0jRX8aPg5M7EjqskDXyaMY519Bp4artWD7BYKPaIHzF/dbvC8MhjFNjaPRWx03lkXn8I5FwTsJiZyDJ/DZ8z89h9V1Ds92diwrAGAXzK3ICK+OOMeiqUnLsIiKZEIiIAiIgCIiAIiIAiIgCIiAKLxHiEcDM8jqHLqT0A5rNiJcjHOOzQXfIWqVxbBSzkSv1BFgcgDyCoz5liVlmOG9ms492tnmtsf8Jnge8Rpu7lz2+qpHFcU94DGE0K3O/mt9x2LIK2PitNwrATYl2TDNNHeVw+yxxlPK7NDUYcHS/wAL+KGTDOhdvA7KD1Y4Zm/KyPRSe3OOIayAf/J3nH/S0ggDzNegWfsV2aGCiIJt7zbj4rL2q4GcQ1r4zUrLq9nNO7T081umpfDpdmaLW6/Y5ZxXCSOIfnOdpsOB2I2+itHZP8QiCIcboT7s3LlQeBt5jwsc14wkWdxhkblkbpTtP+QeqgcZ7NkXbfpvr9l5+PPLG6ZqljU1wdaa4EWDYOxHRfVzj8P+MSRSDCSkujdfsyd2uAsts7tXR16cJqStGOSp0ERFI4EREAREQBERAEREAREQBERAEREAREQHxzQRR2KrmM7NSe7DiXsZ8J1A8tLpWRFGUIy7R1Nroojfw6a5+aaZ0nUHb5K48P4dHC0NjaAApSJGKj0G2+wiIpHDW8X4NHPRPde33Xt3H9x4LS4jgeOIytxERHIuab+ytiKueKE+0SU2uin8F7HvjnbPPMJHN2AFAelK4IinGKiqRxtvlhERdOBERAEREAREQBERAf/Z" 
+    
+        <h2 id="color-override">Make a Burger</h2>
+        <panel>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="newburger" id="color-override">New Burger:</label>
+                    <input type="text" id="newburger" name="burger">
+                    {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
+                    
+                    <button type="submit"  id="addburger" class="btn btn-secondary btn-sm">Submit</button>
+                </div>
+            </form>
+        </panel>
+    
 
-<h2>What kind of Burger Would you like </h2>
+    <div class="row">
+        <!-- Undevoured Burgers -->
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="lefthead"><strong>New Burgers</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                            {{#unless devoured}}
+                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                                <button type="button" class="eatburger btn btn-warning" id ="eatbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-cutlery"></span></button>
+                                <hr>
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Devoured Burgers -->
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="righthead"><strong>Devoured Burgers</strong></div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
+                                <button type="button" class="trashburger btn btn-danger" id ="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                                <hr>
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- /row -->
 
-<ul>
-  {{#each Burger}}
-  {{#unless devoured}}
-  {{> burgers/burger-block devoured=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-  {{#each devoured}}
-  {{#if devoured}}
-  {{> burgers/burgers-block sleep=false}}
-  {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form id="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked id="sleepy"> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0" id="awake"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
-</form>
+</div><!-- /container -->

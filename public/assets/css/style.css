@@ -1,0 +1,36 @@
+
+body {
+
+background-color: aliceblue;
+
+}
+#newburger {
+    border-radius: 10px;
+}
+
+#color-override {
+    color: #fff;
+    
+}
+
+#lefthead {
+    background-color: #b85c8a;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#eatbutton, #trashbutton {
+    float: right;
+}
+
+#righthead {
+    background-color: #f04e9fdc;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+h2 {
+font-size: 25cm;
+
+}
