@@ -1,7 +1,7 @@
 
 body {
 
-background-color: rgb(72, 91, 199);
+background-color: rgba(72, 91, 199, 0.329);
 
 }
 
@@ -10,10 +10,13 @@ background-color: rgb(72, 91, 199);
     h1{
     
         color: antiquewhite;
-        font-size: 10cm;
         align-content: center;
 
 
+    }
+    h2{
+
+        font-size: 1cm;
     }
 #newburger {
     border-radius: 50px;
